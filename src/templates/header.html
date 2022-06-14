@@ -1,4 +1,5 @@
 {% load static %}
+{% load sass_tags %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +11,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<<<<<<< HEAD
   
+=======
+    <link href="{% sass_src 'css/auth.scss' %}" rel="stylesheet" type="text/css"/>
+>>>>>>> 60656eb6a12d60be8bbefceb7d2fe5a41f1f1d16
     <title>{% block titre %}{% endblock %}</title>
 </head>
 <body>
