@@ -2,18 +2,624 @@
 {% block titre %}Home{% endblock %}
 {% block content %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Home</h1>
-                <p>
-                    welcome to the home page
-                </p>
+
+<!-- Mirrored from medifab.dreamguystech.com/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jun 2022 10:33:20 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Medifab - Health &amp; Medical HTML Template</title>
+    <link rel="stylesheet" href=".\static\css\index.css">
+    <link rel="stylesheet" href=".\static\css\carousel.css">
+    <link rel="stylesheet" href=".\static\css\owl.theme.default.min.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href=".\static\img\Accueil\favicon.png">
+
+
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 float-left">
+                        <div class="logo">
+                            <a href="index.html"><img alt="Logo" src=".\static\img\Accueil\logo.png" width="56" height="50"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <nav class="navbar navbar-expand-md p-0">
+                            <div class="navbar-collapse collapse" id="navbar">
+                                <ul class="nav navbar-nav main-nav float-right ml-auto">
+                                    <li class="active nav-item">
+                                        <a href="index.html" class="nav-link">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#A-propos" class="nav-link">A propos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#Departements" class="nav-link">Départements</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#Témoignages" class="nav-link">Témoignages</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#doc" class="nav-link">Docteurs</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#contact" class="nav-link">Contactez-nous</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="btn btn-primary appoint-btn nav-link" href="appointment.html">se
+                                            connecter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
+    </header>
+
+
+    <header class="mobile-header">
+        <div class="panel-control-left">
+            <a class="toggle-menu" href="#side_menu"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="page_title">
+            <a href="index.html"><img src=".\static\img\Accueil\logo.png" alt="Logo" class="img-fluid" width="60"
+                    height="60"></a>
+        </div>
+    </header>
+    
+    <div class="sidebar sidebar-menu" id="side_menu">
+        <div class="sidebar-inner slimscroll">
+        <a id="close_menu" href="#"><i class="fas fa-times"></i></a>
+        <ul class="mobile-menu-wrapper" style="display: block;">
+        <li class="active">
+        <div class="mobile-menu-item clearfix">
+        <a href="index.html">Accueil</a>
+        </div>
+        </li>
+        <li>
+        <div class="mobile-menu-item clearfix">
+        <a href="about-us.html">A propos</a>
+        </div>
+        </li>
+        <li>
+        <div class="mobile-menu-item clearfix">
+        <a href="departments.html">Departements</a>
+        </div>
+        </li>
+        <li>
+        <div class="mobile-menu-item clearfix">
+        <a href="services.html">Témoignages</a>
+        </div>
+        </li>
+        <li>
+        <div class="mobile-menu-item clearfix">
+        <a href="doctors.html">Docteurs</a>
+        </div>
+        </li>
+        <li>
+
+        <ul class="mobile-submenu-wrapper" style="display: none;">
+        
+        
+        <li>
+        <div class="mobile-menu-item clearfix">
+        <a href="contact-us.html">Contactez-nous</a>
+        </div>
+        </li>
+        <li>
+        <div class="mobile-menu-item clearfix">
+        <a href="appointment.html">Se connecter</a>
+        </div>
+        </li>
+        </div>
+        </li>
+        </ul>
+        </div>
+        </div>
+
+
+
+    <div class="main-content">
+        <section class="section home-banner row-middle">
+            <div class="inner-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9">
+                        <div class="banner-content">
+                            <h1>ProxyDoc</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a title="Consult" class="btn btn-primary consult-btn" href="appointment.html">Prendre un rendez-vous?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section features" id="A-propos">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-header text-center">
+                            <h3 class="header-title">A propos de ProxyDOC</h3>
+                            <div class="line"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus
+                                nec dui venenatis dignissim. Aenean vitae metus in augue pretium ultrices.
+                                Duis dictum eget dolor vel blandit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature-row">
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img width="60" height="60" alt="Book an Appointment" src=".\static\img\Accueil\icon-01.png">
+                            </div>
+                            <h4>Prendre un rendez-vous en ligne</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img width="60" height="60" alt="Consult with a Doctor" src=".\static\img\Accueil\icon-02.png">
+                            </div>
+                            <h4>Consultation avec un docteur</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img width="60" height="60" alt="Make a family Doctor" src=".\static\img\Accueil\icon-03.png">
+                            </div>
+                            <h4>Avoir un docteur pour votre suivi</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section meet-doctors" id="doc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-header text-center">
+                            <h3 class="header-title">Rencontrer nos docteurs</h3>
+                            <div class="line"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus
+                                nec dui venenatis dignissim. Aenean vitae metus in augue pretium ultrices.
+                                Duis dictum eget dolor vel blandit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="our_doctor" class="owl-carousel text-center">
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-01.jpg" alt="Dr. Albert Sandoval"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Albert Sandoval</div>
+                                <div class="doctors-position">Neurologue</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a href="doctor-details.html">
+                            <div class="doctor text-center">
+                                <img src=".\static\img\Accueil\doctor-thumb-02.jpg" alt="Dr. Linda Barrett"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Linda Barrett</div>
+                                <div class="doctors-position">Psychologue</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-03.jpg" alt="Dr. Cristina Groves"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Cristina Groves</div>
+                                <div class="doctors-position">Gynécologue</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-04.jpg" alt="Dr. Henry Daniels"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Henry Daniels</div>
+                                <div class="doctors-position">Cardiologue</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-05.jpg" alt="Dr. Diana Bailey"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Diana Bailey</div>
+                                <div class="doctors-position">Dentiste</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-06.jpg" alt="Dr. Justin Parker"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Justin Parker</div>
+                                <div class="doctors-position">Généraliste</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-07.jpg" alt="Dr. Marie Wells" class="rounded-circle"
+                                    width="150" height="150">
+                                <div class="doctors-name">Dr. Marie Wells</div>
+                                <div class="doctors-position">Psychiatre</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-08.jpg" alt="Dr. Pamela Curtis"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Pamela Curtis</div>
+                                <div class="doctors-position">Pédiatre</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="doctor text-center">
+                            <a href="doctor-details.html">
+                                <img src=".\static\img\Accueil\doctor-thumb-09.jpg" alt="Dr. Ronald Jacobs"
+                                    class="rounded-circle" width="150" height="150">
+                                <div class="doctors-name">Dr. Ronald Jacobs</div>
+                                <div class="doctors-position">Oncologue</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="see-all">
+                            <a href="doctors.html" class="btn btn-primary see-all-btn">Voir tous les docteurs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section departments" id="Departements">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-header text-center">
+                            <h3 class="header-title">Départements</h3>
+                            <div class="line"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus
+                                nec dui venenatis dignissim. Aenean vitae metus in augue pretium ultrices.
+                                Duis dictum eget dolor vel blandit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="department-details.html"><img width="67" height="80" alt="Dentists"
+                                        src=".\static\img\Accueil\icon-04.png"></a>
+                            </div>
+                            <h4>
+                                <a href="department-details.html">Odonthologie</a>
+                            </h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="department-details.html"><img width="63" height="80" alt="Neurology"
+                                        src=".\static\img\Accueil\icon-05.png"></a>
+                            </div>
+                            <h4><a href="department-details.html">Neurologie</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="department-details.html"><img width="92" height="80" alt="Opthalmology"
+                                        src=".\static\img\Accueil\icon-06.png"></a>
+                            </div>
+                            <h4><a href="department-details.html">Opthalmologie</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="department-details.html"><img width="40" height="80" alt="Orthopedics"
+                                        src=".\static\img\Accueil\icon-07.png"></a>
+                            </div>
+                            <h4><a href="department-details.html">Orthopedique</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="department-details.html"><img width="76" height="80" alt="Cancer Department"
+                                        src=".\static\img\Accueil\icon-08.png"></a>
+                            </div>
+                            <h4><a href="department-details.html">Cancerologie</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dept-box">
+                            <div class="dept-img">
+                                <a href="department-details.html"><img width="47" height="80" alt="ENT Department"
+                                        src=".\static\img\Accueil\icon-09.png"></a>
+                            </div>
+                            <h4><a href="department-details.html">Oto-rhino-laryngologie</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="see-all">
+                            <a href="departments.html" class="btn btn-primary see-all-btn">Voir tous les Departements</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section testimonials" id="Témoignages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-header text-center">
+                            <h3 class="header-title">Témoignages</h3>
+                            <div class="line"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus
+                                nec dui venenatis dignissim. Aenean vitae metus in augue pretium ultrices.
+                                Duis dictum eget dolor vel blandit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="testimonial_slider" class="owl-carousel text-center">
+                            <div class="item">
+                                <div class="testimonial-list">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src=".\static\img\Accueil\testi-03.jpg" alt="" width="150"
+                                            height="150">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore.
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h3 class="testi-user">- Jennifer Robinson</h3>
+                                        <span>Leland, USA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-list">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src=".\static\img\Accueil\testi-02.jpg" alt="" width="150"
+                                            height="150">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore.
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h3 class="testi-user">- Denise Stevens</h3>
+                                        <span>Abington, USA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-list">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src=".\static\img\Accueil\testi-05.jpg" alt="" width="150"
+                                            height="150">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore.
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h3 class="testi-user">- Charles Ortega</h3>
+                                        <span>El Paso, USA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-list">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src=".\static\img\Accueil\testi-04.jpg" alt="" width="150"
+                                            height="150">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore.
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h3 class="testi-user">- Kyle Bowman</h3>
+                                        <span>Vero Beach, USA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-list">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src=".\static\img\Accueil\testi-01.jpg" alt="" width="150"
+                                            height="150">
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore.
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h3 class="testi-user">- Linda Carpenter</h3>
+                                        <span>Tallahassee, USA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contacts</h4>
+                            <div class="about-clinic">
+                                <p><strong><i class="fa fa-envelope" aria-hidden="true"></i> exemple@gmail.com</strong>
+                                </p>
+                                <p class="m-b-0"><strong><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:+8503867896">(850) 386-7896</a></strong>:
+      
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Sitemap</h4>
+                            <ul class="footer-menu">
+                                <li>
+                                    <a href="about-us.html">A propos</a>
+                                </li>
+                                <li>
+                                    <a href="departments.html">Departements</a>
+                                </li>
+                                <li>
+                                    <a href="services.html">Témoignages</a>
+                                </li>
+                                <li>
+                                    <a href="doctors.html">Docteurs</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">Contactez-nous</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Réseaux</h4>
+                            <div class="appointment-btn">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                <ul class="social-icons clearfix">
+                                    <li>
+                                        <a href="#" target="_blank" title="Facebook"><i
+                                                class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" title="Linkedin"><i
+                                                class="fa fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" title="Google Plus"><i
+                                                class="fa fa-google"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copy-text text-center">
+                                <p>&#xA9; 2019 <a href="#">Medifab</a>. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="sidebar-overlay" data-reff="#side_menu"></div>
+
+    <script src=".\static\js\jquery-3.5.1.min.js"></script>
+
+    <script src=".\static\js\popper.min.js"></script>
+
+    <script src=".\static\js\owl.carousel.min.js"></script>
+
+    <script src=".\static\js\theme.js"></script>
+</body>
+
+
+</html>
 
 {% endblock %}
 {% block footer %}
-    {% include "footer.html" %}
+{% include "footer.html" %}
 {% endblock %}
