@@ -1,12 +1,12 @@
 {% extends "header.html" %}
+{% load static %}
 {% block titre %}Register{% endblock %}
 {% block content %}
-    <div class="container">
         <div class="auth-container">
             <div class="row auth-main">
               <div class="col-sm-6 px-0 d-none d-sm-block">
-                <div class="left-img" style="background-image: url(assets/images/pages/bg-01.png);">
-                </div>
+                <div class="left-img" style="background-image: url({% static 'img/pages/bg-02.png' %});">
+                </div>  
               </div>
               <div class="col-sm-6 auth-form-section">
                 <div class="form-section">
@@ -78,8 +78,6 @@
           
             </div>
           </div>
-          
-    </div>
 {% endblock %}
 {% block footer %}
     {% include "footer.html" %}
