@@ -1,26 +1,108 @@
 {% load static %}
-{% load sass_tags %}
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-<<<<<<< HEAD
-  
-=======
-    <link href="{% sass_src 'css/auth.scss' %}" rel="stylesheet" type="text/css"/>
->>>>>>> 60656eb6a12d60be8bbefceb7d2fe5a41f1f1d16
-    <title>{% block titre %}{% endblock %}</title>
-</head>
-<body>
-{% block content %}{% endblock %}
-<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-</body>
-</html>
+{% block header %}
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 float-left">
+                        <div class="logo">
+                            <a href="index.html"><img alt="Logo" src="{% static 'img/Accueil/logo.png' %}" width="56"
+                                                      height="50"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <nav class="navbar navbar-expand-md p-0">
+                            <div class="navbar-collapse collapse" id="navbar">
+                                <ul class="nav navbar-nav main-nav float-right ml-auto">
+                                    <li class="active nav-item">
+                                        <a href="index.html" class="nav-link">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">A propos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Départements</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Témoignages</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Docteurs</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Contactez-nous</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="btn btn-primary appoint-btn nav-link" href="#">se
+                                            connecter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <header class="mobile-header">
+        <div class="panel-control-left">
+            <a class="toggle-menu" href="#side_menu"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="page_title">
+            <a href="index.html"><img src="{% static 'img/Accueil/logo.png' %}" alt="Logo" class="img-fluid" width="60"
+                                      height="60"></a>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar-menu" id="side_menu">
+        <div class="sidebar-inner slimscroll">
+            <a id="close_menu" href="#"><i class="fas fa-times"></i></a>
+            <ul class="mobile-menu-wrapper" style="display: block;">
+                <li class="active">
+                    <div class="mobile-menu-item clearfix">
+                        <a href="index.html">Accueil</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">A propos</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Departements</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Témoignages</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Docteurs</a>
+                    </div>
+                </li>
+                <li>
+
+                    <ul class="mobile-submenu-wrapper" style="display: none;">
+
+
+                        <li>
+                            <div class="mobile-menu-item clearfix">
+                                <a href="#">Contactez-nous</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mobile-menu-item clearfix">
+                                <a href="#">Se connecter</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
