@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 {% extends "base.html" %}
-{% block titre %}Login{% endblock %}
-=======
-{% extends "header.html" %}
 {% load static %}
 {% block titre %}Register{% endblock %}
->>>>>>> e973ba66a5de359b48dc7796ba9fb4cebe45b829
 {% block content %}
         <div class="auth-container">
             <div class="row auth-main">
@@ -56,7 +51,7 @@
                       <div >{{error}}</div>
                       <div class="container-auth-form-btn">
                         <div style="text-align:center">
-                          <button btn btn-primary
+                          <button
                             class="auth-form-btn btn btn-primary " type="submit">Login</button>
                         </div>
                       </div>
@@ -83,9 +78,6 @@
           
             </div>
           </div>
-{% endblock %}
-{% block footer %}
-    {% include "footer.html" %}
 {% endblock %}
 
 
