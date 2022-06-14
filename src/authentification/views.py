@@ -8,7 +8,7 @@ def login(request):
 
 # Create register view
 def register(request):
-    return redirect('/')
+    return render(request, 'auth/register.html')
 
 
 # Create error 404 view
