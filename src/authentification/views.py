@@ -1,9 +1,9 @@
 from django.shortcuts import redirect
-
+from django.shortcuts import render
 
 # Create login view
 def login(request):
-    return redirect('/')
+    return render(request, 'auth/login.html')
 
 
 # Create register view
