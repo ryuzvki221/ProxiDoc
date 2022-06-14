@@ -11,11 +11,6 @@ def register(request):
     return redirect('/')
 
 
-# Create account view
-def account(request):
-    return redirect('/')
-
-
-# Create logout view
-def logout(request):
+# Create error 404 view
+def error404(request):
     return redirect('/')
