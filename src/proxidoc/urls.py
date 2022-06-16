@@ -20,7 +20,7 @@ from .views import index, pages
 
 urlpatterns = [
     path('', index, name='index'),
-    path('sunu-admin/', admin.site.urls),
+    path('sunu-admin/', admin.site.urls, name ='sunu-admin'),
     path('auth/', include('authentification.urls')),
 
     # Matches any html file
