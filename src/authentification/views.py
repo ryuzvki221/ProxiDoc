@@ -21,7 +21,8 @@ def login_view(request):
         else:
             msg = 'Error validating the form'
     return render(request, 'auth/account/login.html', {"form": form, "msg": msg})
-    
+
+
 # Create register view
 def register_view(request):
     msg = None
@@ -42,8 +43,9 @@ def register_view(request):
             msg = 'Form is not valid'
     else:
         form = RegisterForm()
-    
+
     return render(request, "auth/account/register.html", {'form': form, "msg": msg, "success": success})
+
 
 # Create error 404 view
 def error404_view(request):
