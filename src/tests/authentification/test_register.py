@@ -1,9 +1,10 @@
+import pytest
 from django.test import TestCase
-
-# Create base test .
 from django.urls import reverse
 
 
+# Create base test .
+@pytest.mark.django_db
 class BaseTest(TestCase):
     def setUp(self):
         self.user = {
@@ -20,9 +21,8 @@ class BaseTest(TestCase):
             'password2': 'tes'
         }
         self.user_unmatching_password = {
-
-            'email': 'testemail@proxidoc.com',
             'username': 'test',
+            'email': 'testemail@proxidoc.com',
             'password1': 'Passer@123',
             'password2': 'Passer@1234'
         }
@@ -35,9 +35,6 @@ class BaseTest(TestCase):
             'name': 'fullname'
         }
         return super().setUp()
-
-    def tearDown(self):
-        return super().tearDown()
 
 
 # Create test for register.
