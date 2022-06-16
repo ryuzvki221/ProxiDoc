@@ -37,7 +37,7 @@ class RegisterForm(UserCreationForm):
                 "placeholder": "Email",
                 "class": "form-control"
             }
-        ), max_length= 200
+        ), max_length=200
     )
     password1 = forms.CharField(
         widget=forms.PasswordInput(
