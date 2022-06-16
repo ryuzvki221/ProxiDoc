@@ -66,3 +66,5 @@ class RegisterTest(BaseTest):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context['form'].is_valid(), False)
         self.assertTemplateUsed(response, 'auth/account/register.html')
+
+    
