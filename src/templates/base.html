@@ -1,0 +1,38 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
+    <link rel="stylesheet" href="{%  static 'css/owl.theme.default.min.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'img/Accueil/favicon.png'%}">
+    <link href="{% sass_src 'css/auth.scss' %}" rel="stylesheet" type="text/css"/>
+    {% block link %}{% endblock %}
+    <title>{% block titre %}{% endblock %}</title>
+</head>
+<body>
+{% block header %}{% endblock %}
+<div class="sidebar-overlay" data-reff="#side_menu"></div>
+{% block content %}{% endblock %}
+
+
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+{#<script src="{% static 'js/jquery-3.5.1.min.js'%}"></script>#}
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+
+</body>
+{% block footer %}{% endblock %}
+</html>
