@@ -1,1 +1,1 @@
-web: gunicorn src.proxidoc.wsgi --log-file -
+web: gunicorn --chdir src proxidoc.wsgi:application --log-file -
