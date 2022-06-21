@@ -1,3 +1,4 @@
+sudo: enabled
 language: python
 cache: pip
 python:
@@ -12,12 +13,11 @@ jobs:
       script: pytest src/
     # stage name not required, will continue to use `test`
     - stage: deploy
-      before_script:
-        - apt-get update -qy
+      image: ruby:latest
+      script:
         - apt-get install -y ruby-dev
         - gem install dpl
         - gem install faraday -v 1.8.0
-      script: skip
       deploy: &heroku
         provider: heroku
         api_key:
