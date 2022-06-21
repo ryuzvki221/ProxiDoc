@@ -17,7 +17,6 @@ jobs:
       script:
         - gem install dpl
         - gem install faraday -v 1.10.0
-        - dpl --provider=heroku --app=HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
       deploy: &heroku
         provider: heroku
         api_key:
