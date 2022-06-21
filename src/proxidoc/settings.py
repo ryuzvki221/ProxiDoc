@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-%$+gv@v7^9vnjpiyoijg-e2s&n-mor&6wclyj-d(hplg^*sqy!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['proxidoc.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 # Application definition
 
