@@ -44,7 +44,9 @@ def register_view(request):
     else:
         form = RegisterForm()
 
-    return render(request, "auth/account/register.html", {'form': form, "msg": msg, "success": success})
+    return render(request, "auth/account/register.html",
+                  {'form': form, "msg": msg, "success": success}
+                  )
 
 
 # Create error 404 view
