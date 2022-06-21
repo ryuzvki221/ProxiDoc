@@ -1,4 +1,12 @@
+# Disable sudo to speed up the build
+sudo: false
+
+# Set the build language to Python
 language: python
+
+# Cache to speed up the build
+cache: pip
+
 python:
   - "3.8"
 before_install:
@@ -9,10 +17,13 @@ install:
 # command to run tests
 script:
   - pytest src/
-# Deployment on heroku
+# travis CI straight to heroku deployment CD
 deploy:
   provider: heroku
   api_key:
-    secure: 'd1f147c8-8440-4fb5-ab55-fe7080ef6d09'
-  app: 'proxidoc'
-  on: master
+    secure: $HEROKU_API_KEY
+  app: $HEROKU_APP_NAME
+  run: python src/manage.py migrate
+  on:
+    repo: ryuzvki221/ProxiDoc
+    branch: master
