@@ -13,13 +13,25 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.core.exceptions import ImproperlyConfigured
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%$+gv@v7^9vnjpiyoijg-e2s&n-mor&6wclyj-d(hplg^*sqy!'
+def get_env_variable(param, param1=None):
+    try:
+        return os.environ[param]
+    except KeyError:
+        if param1 is None:
+            raise ImproperlyConfigured(f'{param} is not set in the environment')
+        return os.environ[param1]
+
+
+SECRET_KEY = get_env_variable('SECRET_KEY', 'django-insecure-%$+gv@v7^9vnjpiyoijg-e2s&n-mor&6wclyj-d(hplg^*sqy!')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -68,7 +80,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'proxidoc.wsgi.application'
-
 
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
