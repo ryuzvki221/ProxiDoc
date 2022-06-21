@@ -2,80 +2,87 @@
 {% load static %}
 {% block titre %}Login{% endblock %}
 {% block content %}
-    
-        <div class="auth-container">
-            <div class="row auth-main">
-              <div class="col-sm-6 px-0 d-none d-sm-block">
+
+    <div class="auth-container">
+        <div class="row auth-main">
+            <div class="col-sm-6 px-0 d-none d-sm-block">
                 <div class="left-img" style="background-image: url({% static 'img/pages/bg-01.png' %});">
                 </div>
-              </div>
-              <div class="col-sm-6 auth-form-section">
+            </div>
+            <div class="col-sm-6 auth-form-section">
                 <div class="form-section">
-                  <div class="auth-wrapper">
-                    <h2 class="welcome-msg"> Welcome to Cliniva </h2>
-                    <p class="auth-signup-text text-muted">Need an account?<a href="#"
-                        class="sign-up-link">Sign Up
-                      </a></p>
-                    
-                    <h2 class="login-title">Sign in</h2>
-                    <form class="validate-form">
-                      <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
-                          <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
-                            {% comment %} <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> {% endcomment %}
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
-                          <div class="form-group">
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        </div>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center mb-5">
-                        <div class="form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" value=""> Remember me
-                            <span class="form-check-sign">
+                    <div class="auth-wrapper">
+                        <h2 class="welcome-msg"> Welcome to ProxiDoc </h2>
+                        <p class="auth-signup-text text-muted">Need an account?<a href="{% url 'register' %}"
+                                                                                  class="sign-up-link">Sign Up
+                        </a></p>
+
+                        <h2 class="login-title">Sign in</h2>
+                        <form class="validate-form">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"></label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                                                                       aria-describedby="emailHelp" placeholder="Email address">
+                                        {% comment %}
+                                            <small id="emailHelp" class="form-text text-muted">We'll never share your
+                                                email with anyone else.</small> {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1"></label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                                                                          placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-5">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" value=""> Remember me
+                                        <span class="form-check-sign">
                               <span class="check"></span>
                             </span>
-                          </label>
-                        </div>
-                        <a class="txt1" href="#">Forgot Password?</a>
-                      </div>
-                      <div >{{error}}</div>
-                      <div class="container-auth-form-btn">
-                        <div style="text-align:center">
-                          <button
-                            class="auth-form-btn btn btn-primary " type="submit">Login</button>
-                        </div>
-                      </div>
-                    </form>
-                    <h6 class="social-login-title">OR</h6>
-                    <ul class="list-unstyled social-icon mb-0 mt-3">
-                      <li class="list-inline-item"><a href=""  class="rounded">
-                          <i class="fa fa-google"></i>
-                        </a></li>
-                      <li class="list-inline-item"><a href="" class="rounded flex-c-m">
-                          <i class="fa fa-facebook-f"></i>
-                        </a></li>
-                      <li class="list-inline-item"><a href="" class="rounded">
-                          <i class="fa fa-twitter"></i>
-                        </a></li>
-                      <li class="list-inline-item"><a href="" class="rounded">
-                          <i class="fa fa-linkedin"></i>
-                        </a></li>
-                        
-                    </ul>
-                  </div>
+                                    </label>
+                                </div>
+                                <a class="txt1" href="#">Forgot Password?</a>
+                            </div>
+                            <div>{{ error }}</div>
+                            <div class="container-auth-form-btn">
+                                <div style="text-align:center">
+                                    <button
+                                            class="auth-form-btn btn btn-primary " type="submit">Login
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <h6 class="social-login-title">OR</h6>
+                        <ul class="list-unstyled social-icon mb-0 mt-3">
+                            <li class="list-inline-item"><a href="" class="rounded">
+                                <i class="fa fa-google"></i>
+                            </a></li>
+                            <li class="list-inline-item"><a href="" class="rounded flex-c-m">
+                                <i class="fa fa-facebook-f"></i>
+                            </a></li>
+                            <li class="list-inline-item"><a href="" class="rounded">
+                                <i class="fa fa-twitter"></i>
+                            </a></li>
+                            <li class="list-inline-item"><a href="" class="rounded">
+                                <i class="fa fa-linkedin"></i>
+                            </a></li>
+
+                        </ul>
+                    </div>
                 </div>
-              </div>
-          
             </div>
-          </div>
-          
+
+        </div>
+    </div>
+
 {% endblock %}
 
 

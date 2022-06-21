@@ -14,10 +14,8 @@ SECRET_KEY = 'c*6zjk#s&!&$s-!djeycl772hbs4%m8js2$u&n$h9y&nsk&e(o'
 DEBUG = False
 TEMPLATE_DEBUG = False
 ALLOWED_HOSTS = ['proxidoc.herokuapp.com']
-# Database production settings
-DATABASES['default'] = dj_database_url.config()
-
 # Application definition
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Database production settings
+DATABASES['default'] = dj_database_url.config()

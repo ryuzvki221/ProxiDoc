@@ -34,9 +34,9 @@ def register_view(request):
             form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=raw_password)
+            authenticate(username=username, password=raw_password)
 
-            msg = 'User created - please <a href="/auth/login/">login</a>'
+            msg = 'User created - please <a href="/login">login</a>'
             success = True
             # return redirect ("/auth/login/")
         else:
