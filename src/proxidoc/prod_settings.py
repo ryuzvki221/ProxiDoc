@@ -1,4 +1,5 @@
 from .settings import *
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,9 +10,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'c*6zjk#s&!&$s-!djeycl772hbs4%m8js2$u&n$h9y&nsk&e(o'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# debug turned off in production!
 DEBUG = False
 TEMPLATE_DEBUG = False
 ALLOWED_HOSTS = ['proxidoc.herokuapp.com']
+# Database production settings
+DATABASES['default'] = dj_database_url.config()
 
 # Application definition
