@@ -28,7 +28,7 @@ def get_env_variable(param, param1=None):
     except KeyError:
         if param1 is None:
             raise ImproperlyConfigured(f'{param} is not set in the environment')
-        return os.environ[param1]
+        return param1
 
 
 SECRET_KEY = get_env_variable('SECRET_KEY', 'django-insecure-%$+gv@v7^9vnjpiyoijg-e2s&n-mor&6wclyj-d(hplg^*sqy!')
