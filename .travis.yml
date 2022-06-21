@@ -12,6 +12,7 @@ jobs:
       script: pytest src/
     # stage name not required, will continue to use `test`
     - stage: deploy
+      language: ruby
       rvm:
         - '2.6'
       script:
