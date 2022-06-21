@@ -12,12 +12,11 @@ jobs:
       script: pytest src/
     # stage name not required, will continue to use `test`
     - stage: deploy
-      before_script:
-        - sudo apt-get update -qy
-        - sudo apt-get install -y ruby-dev
       script:
         - gem install dpl
-        - gem install faraday -v 1.10.0
+        - gem install faraday -v 1.8.0
+      before_deploy:
+        - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
       deploy:
         provider: heroku
         api_key:
