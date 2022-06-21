@@ -1,20 +1,29 @@
 language: python
 cache: pip
 python:
-  - '3.8'
   - '3.9'
 before_install:
   - python -m pip install --upgrade pip
 install:
   - pip install -r requirements.txt
-script:
-  - pytest src/
-deploy:
-  provider: heroku
-  api_key:
-    secure: CIQH13VohyKiM5O4wsrcbPT4DnvvW2CJCpsCGYbWNHnYgWigME59fOtcsO8CagAyeZBrluYcGz5rYzpAw8qmkD/Gy4TPGq8WptFvi9IVOH9DuyWhBE9JmhPSdDm6s+yMZNFVrLQD/KLTWCrOctXG1VuKFzHNb3lmK+8cja92G46Tf02KijMMkNiULdM222WdGD/WNQ26EBkmyVyYGwTtn1ff1NcbajrR+lKyvJ55zhQpt5Bw/n4KZ6qDDM8vlcMfvI+llVZ3CIq6JRs3VFDmLUHHtr/zpF5tL/fwmyS3YuX2Phj8FJPyqtnee+QDs6GBMf+e8tUw1aZ4Z6GJXpvHxClE3//D5po6HbJcSyoi4+WUSajIsR0ZA3u6VgyFDwKReskkCPwwawyMo0V5laliCwu8mWVFoXmXlPAEVrHqU+Y5qhSH9AIJf/qhY9hmjcZWJLUfpCA/DOCzXbhimbUUEEltjiaNRQDwylBQkd49Y70sEQI3A1CpbSnhP00AyGCoiGcD4eApv/GjwnTyEIsi9YgbQb9TBrPYKIsp4A7Qv3DYoNeX8q5FxmV/nMPnU7QDcSodLWWnL15RLdVNzan5DSdrK/lZdbZ16HWG6pKisoGg/xJTvs9mhudL+gLOBewFdC0OzSmnS5L4whSeu5oRFQZj80oO/axwtm6LtyAiu0I=
-  app: "$HEROKU_APP_NAME"
-  run: python src/manage.py migrate
-  on:
-    repo: ryuzvki221/ProxiDoc
-    branch: master
+jobs:
+  include:
+    - stage: tests
+      script: pytest src/
+    # stage name not required, will continue to use `test`
+    - stage: deploy
+      before_script:
+        - apt-get update -qy
+        - apt-get install -y ruby-dev
+        - gem install dpl
+        - gem install faraday -v 1.8.0
+      script: skip
+      deploy: &heroku
+        provider: heroku
+        api_key:
+          secure: CIQH13VohyKiM5O4wsrcbPT4DnvvW2CJCpsCGYbWNHnYgWigME59fOtcsO8CagAyeZBrluYcGz5rYzpAw8qmkD/Gy4TPGq8WptFvi9IVOH9DuyWhBE9JmhPSdDm6s+yMZNFVrLQD/KLTWCrOctXG1VuKFzHNb3lmK+8cja92G46Tf02KijMMkNiULdM222WdGD/WNQ26EBkmyVyYGwTtn1ff1NcbajrR+lKyvJ55zhQpt5Bw/n4KZ6qDDM8vlcMfvI+llVZ3CIq6JRs3VFDmLUHHtr/zpF5tL/fwmyS3YuX2Phj8FJPyqtnee+QDs6GBMf+e8tUw1aZ4Z6GJXpvHxClE3//D5po6HbJcSyoi4+WUSajIsR0ZA3u6VgyFDwKReskkCPwwawyMo0V5laliCwu8mWVFoXmXlPAEVrHqU+Y5qhSH9AIJf/qhY9hmjcZWJLUfpCA/DOCzXbhimbUUEEltjiaNRQDwylBQkd49Y70sEQI3A1CpbSnhP00AyGCoiGcD4eApv/GjwnTyEIsi9YgbQb9TBrPYKIsp4A7Qv3DYoNeX8q5FxmV/nMPnU7QDcSodLWWnL15RLdVNzan5DSdrK/lZdbZ16HWG6pKisoGg/xJTvs9mhudL+gLOBewFdC0OzSmnS5L4whSeu5oRFQZj80oO/axwtm6LtyAiu0I=
+        app: "$HEROKU_APP_NAME"
+        run: python src/manage.py migrate
+        on:
+          repo: ryuzvki221/ProxiDoc
+          branch: master
