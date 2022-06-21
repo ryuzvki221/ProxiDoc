@@ -1,29 +1,20 @@
-# Disable sudo to speed up the build
 sudo: false
-
-# Set the build language to Python
 language: python
-
-# Cache to speed up the build
 cache: pip
-
 python:
-  - "3.8"
+  - '3.8'
 before_install:
   - python -m pip install --upgrade pip
-# command to install dependencies
 install:
   - pip install -r requirements.txt
-# command to run tests
 script:
   - pytest src/
-# travis CI straight to heroku deployment CD
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_API_KEY
-  app: $HEROKU_APP_NAME
+    secure: Yd1gqHSo5gDI42f40J7HPuovQd2XcXaUu9b/zupVGcdryLX01Rcb+zih5MN+0MCPhHNkqLwoOWc4STWzqcdu9P4X96H9XqqO4ZqQuuw+i/5DJeRBSpe4xanSD9mKktiwOB30SJggiaGmoDFBaiIbCzCtZfxPTFRP8//AfgM60gCSmDHAKC5ZMLlWfpkLVgAwtFNcVOZvUfbHrUQ+W0yJirj11ehsTCCHn9EtGrKrU9b6flvxfORvYvQAh3LLGyvoWhbjQIp2T2iZ74W+bf8GFEm5RN4Q+eTLMFv3M9yn7ADOFPTPT+ulFyY/HoYmvY+dzTcYGkmHvLvnBciXktqqsdSYjX2xDoIhmC1pUp8dOVl+VrxAFxtSj8Jubn6YY32ZU+7EojEPb1NT8GxNVKv/B9xQlgGdEi16AJBlf/0r+Q2l2P6DAebCTg7bfyxcwFN1N7mWSmjMNHvzfKOCJ50uaMLBCjplwbIkAn08n9q/kPKx6cLdrevYhSBjFX7qkg1QrFIhVRCfJ8hKIQjnKqowlAzHByOeLX1gQCBTQZFKXqO5lLauR4d8fMStsnyaAuu2UdQ9LLgKsgo58fVrpzaMyuvEyUXmYogoGZn8/aPE7FnJ2z2WXPZooxASADHcZsIFQTSIKpJXfrxllav3vhG/BwboQPcjRRuRrtGlBsYU6IM=
+  app: proxidoc
   run: python src/manage.py migrate
   on:
     repo: ryuzvki221/ProxiDoc
-    branch: master
+  skip_cleanup: 'true'
