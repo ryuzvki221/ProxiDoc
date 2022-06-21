@@ -7,6 +7,7 @@ import pytest
     'register',
     'error404',
     'logout',
+    'error500',
 ])
 def test_render_views(client, param):
     view_url = urls.reverse(param)
