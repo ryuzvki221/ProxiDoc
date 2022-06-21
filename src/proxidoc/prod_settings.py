@@ -16,6 +16,6 @@ TEMPLATE_DEBUG = False
 ALLOWED_HOSTS = ['proxidoc.herokuapp.com']
 # Application definition
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Database production settings
 DATABASES['default'] = dj_database_url.config()
