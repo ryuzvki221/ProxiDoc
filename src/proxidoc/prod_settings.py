@@ -18,3 +18,11 @@ ALLOWED_HOSTS = ['proxidoc.herokuapp.com']
 DATABASES['default'] = dj_database_url.config()
 
 # Application definition
+MIDDLEWARE += [
+    # ...
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # ...
+]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
