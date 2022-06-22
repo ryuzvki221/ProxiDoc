@@ -62,7 +62,7 @@ def error500_view(request):
 # Create logout view
 def logout_view(request):
     logout(request)
-    return redirect("login")
+    return redirect("index")
 
 
 # Create profile view
