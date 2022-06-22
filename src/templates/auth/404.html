@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block titre %}Page404{% endblock %}
+{% block titre %}Page-404{% endblock %}
 
 {% block content %}
     <div class="auth-container">
@@ -17,20 +17,21 @@
               404
             </span>
                             <span class="error-subheader p-b-5">
-              Looks Like You're Lost
+              On dirait que vous êtes perdu
             </span>
                             <span class="error-subheader2 p-b-5">
-              The Page You Are Looking For Not Available!
+              La page que vous recherchez n'est pas disponible !
             </span>
                             <div class="container-auth-form-btn mt-5">
-                                <button class="auth-form-btn btn-primary"  href="{% url 'index' %}">
-                                    Go To Home Page
+                                <button class="btn bg-gradient-info w-100 mt-4  btn btn-primary"
+                                        href="{% url 'index' %}">
+                                    Aller à la page d'accueil
                                 </button>
                             </div>
                             <div class="w-full p-t-15 p-b-15 text-center">
                                 <div>
                                     <a href="{% url 'login' %}" class="txt1">
-                                        Need Help?
+                                        Besoin d'aide ?
                                     </a>
                                 </div>
                             </div>

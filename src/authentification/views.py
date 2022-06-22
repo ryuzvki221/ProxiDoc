@@ -57,3 +57,7 @@ def error404_view(request):
 # Create error 500 view
 def error500_view(request):
     return render(request, 'auth/500.html')
+
+
+
+
