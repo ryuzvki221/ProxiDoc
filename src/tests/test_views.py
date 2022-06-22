@@ -25,4 +25,4 @@ def test_render_logout(client):
     logout_url = urls.reverse('logout')
     response = client.get(logout_url)
     assert response.status_code == 302
-    assert response.url == urls.reverse('login')
+    assert response.url == urls.reverse('index')
