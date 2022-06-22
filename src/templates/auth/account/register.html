@@ -2,92 +2,91 @@
 {% load static %}
 {% block titre %}Register{% endblock %}
 {% block content %}
-        <div class="auth-container">
-            <div class="row auth-main">
-              <div class="col-sm-6 px-0 d-none d-sm-block">
+    <div class="auth-container">
+        <div class="row auth-main">
+            <div class="col-sm-6 px-0 d-none d-sm-block">
                 <div class="left-img" style="background-image: url({% static 'img/pages/bg-02.png' %});">
-                </div>  
-              </div>
-              <div class="col-sm-6 auth-form-section">
-                <div class="form-section">
-                  <div class="auth-wrapper">
-                    <h2 class="login-title">Sign Up</h2>
-                    <p class="mb-0">
-                        {% if msg %}
-                            {{ msg | safe }}
-                        {% else %}
-                            Add your credentials
-                        {% endif %}                 
-                    </p>
-                    <p class="auth-signup-text text-muted">Enter details to create your account</p>
-                    <form class="validate-form" role="form text-left" method="post" action="">
-                      {% csrf_token %}
-                      <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
-                          <div class="form-group">
-                            <label>Username</label>
-                            {{ form.username }}
-                          </div>
-                          <span class="text-error">{{ form.username.errors }}</span>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
-                          <div class="form-group">
-                            <label>Email</label>
-                            {{ form.email }}
-                          </div>
-                          <span class="text-error">{{ form.email.errors }}</span>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
-                          <div class="form-group">
-                            <label>Password</label>
-                            {{ form.password1 }}
-                        </div>
-                        <span class="text-error">{{ form.password1.errors }}</span>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
-                          <div class="form-group">
-                          <label>Confirm Password</label>
-                          {{ form.password2 }}
-                        </div>
-                        <span class="text-error">{{ form.password2.errors }}</span>
-                        </div>
-                      </div>
-                      <div >{{error}}</div>
-                      <div class="container-auth-form-btn">
-                        <div style="text-align:center">
-                          <button
-                            class="auth-form-btn btn btn-primary " name="register" type="submit">Register</button>
-                        </div>
-                      </div>
-                    </form>
-                    <h6 class="social-login-title">OR</h6>
-                    <ul class="list-unstyled social-icon mb-0 mt-3">
-                      <li class="list-inline-item"><a href=""  class="rounded">
-                          <i class="fa fa-google"></i>
-                        </a></li>
-                      <li class="list-inline-item"><a href="" class="rounded flex-c-m">
-                          <i class="fa fa-facebook-f"></i>
-                        </a></li>
-                      <li class="list-inline-item"><a href="" class="rounded">
-                          <i class="fa fa-twitter"></i>
-                        </a></li>
-                      <li class="list-inline-item"><a href="" class="rounded">
-                          <i class="fa fa-linkedin"></i>
-                        </a></li>
-                        
-                    </ul>
-                  </div>
                 </div>
-              </div>
-          
             </div>
-          </div>
+            <div class="col-sm-6 auth-form-section">
+                <div class="form-section">
+                    <div class="auth-wrapper">
+                        <h2 class="login-title">S'enregistrer</h2>
+                        <p class="mb-0">
+                            {% if msg %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{ msg | safe }}
+                                </div>
+                            {% else %}
+                                {#                            Ajoutez vos informations d'identification#}
+                            {% endif %}
+                        <p class="auth-signup-text text-muted">Entrez les détails pour créer votre compte</p>
+                        <form class="validate-form" role="form text-left" method="post" action="">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                                    <div class="form-group">
+                                        {{ form.username }}
+                                    </div>
+                                    <span class="text-error">{{ form.username.errors }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                                    <div class="form-group">
+                                        {{ form.email }}
+                                    </div>
+                                    <span class="text-error">{{ form.email.errors }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                                    <div class="form-group">
+                                        {{ form.password1 }}
+                                    </div>
+                                    <span class="text-error">{{ form.password1.errors }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12col-lg-12 col-md-12 col-sm-12 mb-2">
+                                    <div class="form-group">
+                                        {{ form.password2 }}
+                                    </div>
+                                    <span class="text-error">{{ form.password2.errors }}</span>
+                                </div>
+                            </div>
+                            <div>{{ error }}</div>
+                            <div class="container-auth-form-btn">
+                                <div style="text-align:center">
+                                    <button
+                                            class="btn bg-gradient-info w-100 mt-4  btn btn-primary " name="register"
+                                            type="submit">S'inscrire
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <h6 class="social-login-title">OR</h6>
+                        <ul class="list-unstyled social-icon mb-0 mt-3">
+                            <li class="list-inline-item"><a href="" class="rounded">
+                                <i class="fa fa-google"></i>
+                            </a></li>
+                            <li class="list-inline-item"><a href="" class="rounded flex-c-m">
+                                <i class="fa fa-facebook-f"></i>
+                            </a></li>
+                            <li class="list-inline-item"><a href="" class="rounded">
+                                <i class="fa fa-twitter"></i>
+                            </a></li>
+                            <li class="list-inline-item"><a href="" class="rounded">
+                                <i class="fa fa-linkedin"></i>
+                            </a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
 
 
