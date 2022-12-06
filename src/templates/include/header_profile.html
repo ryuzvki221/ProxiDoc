@@ -1,0 +1,49 @@
+{% load static %}
+{% block header %}
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 float-left">
+                        <div class="logo">
+                            <a href="{% url 'profile' %}"><img alt="Logo" src="{% static 'img/Accueil/logo.png' %}"
+                                                               width="56"
+                                                               height="50"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <nav class="navbar navbar-expand-md p-0">
+                            <div class="navbar-collapse collapse" id="navbar">
+                                <ul class="nav navbar-nav main-nav float-right ml-auto">
+                                    <li class="active nav-item">
+                                        <a href="{% url 'profile' %}" class="nav-link">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">A propos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Départements</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Témoignages</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Docteurs</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Contactez-nous</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="btn btn-primary appoint-btn nav-link" href="{% url 'logout' %}">se
+                                            déconnecter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock %}

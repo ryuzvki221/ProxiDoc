@@ -1,3 +1,5 @@
+import logging
+
 from django import template
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
@@ -5,7 +7,6 @@ from django.template import loader
 from django.urls import reverse
 
 
-@login_required(login_url="/login")
 def index(request):
     context = {'segment': 'index'}
 
@@ -13,7 +14,6 @@ def index(request):
     return HttpResponse(html_template.render(context, request))
 
 
-@login_required(login_url="/login")
 def pages(request):
     context = {}
     # All resource paths end in .html.
@@ -34,6 +34,7 @@ def pages(request):
         html_template = loader.get_template('auth/404.html')
         return HttpResponse(html_template.render(context, request))
 
-    # except:
-    #     html_template = loader.get_template('auth/500.html')
-    #     return HttpResponse(html_template.render(context, request))
+    except Exception as e:
+        logging.exception(e)
+        html_template = loader.get_template('auth/500.html')
+        return HttpResponse(html_template.render(context, request))

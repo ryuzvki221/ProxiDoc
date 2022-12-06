@@ -1,6 +1,4 @@
-{% load static %} {% block header %}
-<header class="header">
-  <div class="header-top">
+  <!-- <div class="header-top">
     <div class="container">
       <div class="row">
         <div class="col-md-2 float-left">
@@ -41,75 +39,121 @@
                     >se connecter</a
                   >
                 </li>
-              </ul>
+              </ul> -->
+{% load static %}
+    <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 float-left">
+                        <div class="logo">
+                            <a href="index.html"><img alt="Logo" src="{% static 'img/Accueil/logo.png' %}" width="56"
+                                                      height="50"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <nav class="navbar navbar-expand-md p-0">
+                            <div class="navbar-collapse collapse" id="navbar">
+                                <ul class="nav navbar-nav main-nav float-right ml-auto">
+                                    <li class="active nav-item">
+                                        <a href="index.html" class="nav-link">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">A propos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Départements</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Témoignages</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Docteurs</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Contactez-nous</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="btn btn-primary appoint-btn nav-link" href="{% url 'login' %}">se
+                                            connecter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
           </nav>
+
+    </header>
+
+    <header class="mobile-header">
+        <div class="panel-control-left">
+            <a class="toggle-menu" href="#side_menu"><i class="fa fa-bars"></i></a>
         </div>
-      </div>
+        <div class="page_title">
+            <a href="index.html"><img src="{% static 'img/Accueil/logo.png' %}" alt="Logo" class="img-fluid" width="60"
+                                      height="60"></a>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar-menu" id="side_menu">
+        <div class="sidebar-inner slimscroll">
+            <a id="close_menu" href="#"><i class="fas fa-times"></i></a>
+            <ul class="mobile-menu-wrapper" style="display: block;">
+                <li class="active">
+                    <div class="mobile-menu-item clearfix">
+                        <a href="index.html">Accueil</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">A propos</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Departements</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Témoignages</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Docteurs</a>
+                    </div>
+                </li>
+                <li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="#">Contactez-nous</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="mobile-menu-item clearfix">
+                        <a href="{% url 'login' %}">Se connecter</a>
+                    </div>
+                </li>
+
+                    <ul class="mobile-submenu-wrapper" style="display: none;">
+
+
+                        <li>
+                            <div class="mobile-menu-item clearfix">
+                                <a href="#">Contactez-nous</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mobile-menu-item clearfix">
+                                <a href="#">Se connecter</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-</header>
 
-<header class="mobile-header">
-  <div class="panel-control-left">
-    <a class="toggle-menu" href="#side_menu"><i class="fa fa-bars"></i></a>
-  </div>
-  <div class="page_title">
-    <a href="index.html"
-      ><img
-        src="{% static 'img/Accueil/logo.png' %}"
-        alt="Logo"
-        class="img-fluid"
-        width="60"
-        height="60"
-    /></a>
-  </div>
-</header>
-
-<div class="sidebar sidebar-menu" id="side_menu">
-  <div class="sidebar-inner slimscroll">
-    <a id="close_menu" href="#"><i class="fas fa-times"></i></a>
-    <ul class="mobile-menu-wrapper" style="display: block">
-      <li class="active">
-        <div class="mobile-menu-item clearfix">
-          <a href="index.html">Accueil</a>
-        </div>
-      </li>
-      <li>
-        <div class="mobile-menu-item clearfix">
-          <a href="#">A propos</a>
-        </div>
-      </li>
-      <li>
-        <div class="mobile-menu-item clearfix">
-          <a href="#">Departements</a>
-        </div>
-      </li>
-      <li>
-        <div class="mobile-menu-item clearfix">
-          <a href="#">Témoignages</a>
-        </div>
-      </li>
-      <li>
-        <div class="mobile-menu-item clearfix">
-          <a href="#">Docteurs</a>
-        </div>
-      </li>
-      <li>
-        <ul class="mobile-submenu-wrapper" style="display: none">
-          <li>
-            <div class="mobile-menu-item clearfix">
-              <a href="#">Contactez-nous</a>
-            </div>
-          </li>
-          <li>
-            <div class="mobile-menu-item clearfix">
-              <a href="#">Se connecter</a>
-            </div>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
 {% endblock %}
